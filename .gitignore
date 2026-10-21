@@ -1,0 +1,17 @@
+# Godot 4
+.godot/
+export/
+build/
+*.tmp
+*.log
+
+# 导出产物（体积大，不进仓库）
+demo/
+*.exe
+*.pck
+
+# OS / IDE
+Thumbs.db
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,107 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://game/pop/game_over.gd" id="1_over"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+bg_color = Color(0.99, 0.95, 0.87, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.42, 0.28, 0.18, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.25)
+shadow_size = 14
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_over")
+
+[node name="Dimmer" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.06, 0.08, 0.13, 0.66)
+
+[node name="Card" type="Panel" parent="."]
+offset_left = 360.0
+offset_top = 130.0
+offset_right = 920.0
+offset_bottom = 590.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="LblTitle" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 380.0
+offset_top = 158.0
+offset_right = 900.0
+offset_bottom = 226.0
+theme_override_colors/font_color = Color(0.30, 0.20, 0.14, 1)
+theme_override_font_sizes/font_size = 46
+text = "锅空了…"
+horizontal_alignment = 1
+
+[node name="LblScore" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 380.0
+offset_top = 232.0
+offset_right = 900.0
+offset_bottom = 330.0
+theme_override_colors/font_color = Color(0.78, 0.36, 0.16, 1)
+theme_override_font_sizes/font_size = 78
+text = "0"
+horizontal_alignment = 1
+
+[node name="LblDetail" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 380.0
+offset_top = 334.0
+offset_right = 900.0
+offset_bottom = 372.0
+theme_override_colors/font_color = Color(0.38, 0.28, 0.22, 1)
+theme_override_font_sizes/font_size = 26
+text = "接住 0 个饭团 · 最高连击 0"
+horizontal_alignment = 1
+
+[node name="LblBest" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 380.0
+offset_top = 370.0
+offset_right = 900.0
+offset_bottom = 402.0
+theme_override_colors/font_color = Color(0.62, 0.44, 0.18, 1)
+theme_override_font_sizes/font_size = 26
+text = "最高分 0"
+horizontal_alignment = 1
+
+[node name="LblMeme" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 372.0
+offset_top = 404.0
+offset_right = 908.0
+offset_bottom = 434.0
+theme_override_colors/font_color = Color(0.52, 0.42, 0.34, 0.92)
+theme_override_font_sizes/font_size = 20
+text = "「你这吃白饭的蓝色大肥鱼」"
+horizontal_alignment = 1
+
+[node name="BtnRestart" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 470.0
+offset_top = 438.0
+offset_right = 810.0
+offset_bottom = 502.0
+theme_override_font_sizes/font_size = 30
+text = "再来一局"
+
+[node name="BtnMenu" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 470.0
+offset_top = 514.0
+offset_right = 810.0
+offset_bottom = 566.0
+theme_override_font_sizes/font_size = 26
+text = "回主菜单"

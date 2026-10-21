@@ -1,0 +1,94 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://game/menu/main_menu.gd" id="1_menu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_card"]
+bg_color = Color(0.99, 0.95, 0.87, 1)
+border_width_left = 6
+border_width_top = 6
+border_width_right = 6
+border_width_bottom = 6
+border_color = Color(0.42, 0.28, 0.18, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+shadow_color = Color(0, 0, 0, 0.3)
+shadow_size = 16
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1_menu")
+
+[node name="Bg" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.13, 0.17, 0.27, 1)
+
+[node name="Card" type="Panel" parent="."]
+offset_left = 330.0
+offset_top = 100.0
+offset_right = 950.0
+offset_bottom = 500.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_card")
+
+[node name="Title" type="Label" parent="."]
+offset_left = 340.0
+offset_top = 126.0
+offset_right = 940.0
+offset_bottom = 206.0
+theme_override_colors/font_color = Color(0.30, 0.20, 0.14, 1)
+theme_override_font_sizes/font_size = 60
+text = "大肥鱼接米饭"
+horizontal_alignment = 1
+
+[node name="Sub" type="Label" parent="."]
+offset_left = 340.0
+offset_top = 210.0
+offset_right = 940.0
+offset_bottom = 246.0
+theme_override_colors/font_color = Color(0.42, 0.31, 0.24, 1)
+theme_override_font_sizes/font_size = 24
+text = "白米饭和 token 通吃 · 举着锅接天上掉下来的米饭"
+horizontal_alignment = 1
+
+[node name="LblBest" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = 340.0
+offset_top = 252.0
+offset_right = 940.0
+offset_bottom = 288.0
+theme_override_colors/font_color = Color(0.62, 0.44, 0.18, 1)
+theme_override_font_sizes/font_size = 26
+text = "最高分 0"
+horizontal_alignment = 1
+
+[node name="BtnStart" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 470.0
+offset_top = 302.0
+offset_right = 810.0
+offset_bottom = 366.0
+theme_override_font_sizes/font_size = 32
+text = "开始接饭"
+
+[node name="BtnQuit" type="Button" parent="."]
+unique_name_in_owner = true
+offset_left = 470.0
+offset_top = 378.0
+offset_right = 810.0
+offset_bottom = 432.0
+theme_override_font_sizes/font_size = 24
+text = "退出游戏"
+
+[node name="Hint" type="Label" parent="."]
+offset_left = 340.0
+offset_top = 442.0
+offset_right = 940.0
+offset_bottom = 488.0
+theme_override_colors/font_color = Color(0.48, 0.38, 0.30, 1)
+theme_override_font_sizes/font_size = 20
+text = "← → / A D 移动 · 按住鼠标拖动 · 用锅接住饭团，躲开石头和辣椒"
+horizontal_alignment = 1
+autowrap_mode = 2
